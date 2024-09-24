@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import sample.bean.Game;
 import sample.config.GameConfig;
+import sample.config.MyGameConfig;
 
 public class SpringExam02 {
     public static void main(String[] args) {

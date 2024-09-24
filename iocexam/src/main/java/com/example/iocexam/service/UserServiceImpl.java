@@ -2,8 +2,15 @@ package com.example.iocexam.service;
 
 import com.example.iocexam.dao.UserDao;
 import com.example.iocexam.domain.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserServiceImpl implements UserService {
+    @Autowired
+    @Qualifier("caramiDao")
     private UserDao userDao;
 
 //    public UserServiceImpl(UserDao userDao) {
@@ -14,10 +21,10 @@ public class UserServiceImpl implements UserService {
     public UserServiceImpl() {
         System.out.println("UserServiceImpl() 생성");
     }
-
-    public void setUserDao(UserDao userDao) {
-        this.userDao = userDao;
-    }
+//    @Autowired
+//    public void setUserDao(UserDao userDao) {
+//        this.userDao = userDao;
+//    }
 
     @Override
     public void joinUser(User user) {
