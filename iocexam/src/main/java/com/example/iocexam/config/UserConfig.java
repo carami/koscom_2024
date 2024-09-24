@@ -1,5 +1,6 @@
 package com.example.iocexam.config;
 
+import com.example.iocexam.controller.UserController;
 import com.example.iocexam.dao.UserDao;
 import com.example.iocexam.dao.UserDaoImpl;
 import com.example.iocexam.service.UserService;
@@ -20,5 +21,10 @@ public class UserConfig {
         UserServiceImpl userServie = new UserServiceImpl();
         userServie.setUserDao(userDao);
         return userServie;
+    }
+
+    @Bean
+    public UserController userController(UserService userService) {
+        return new UserController(userService);
     }
 }
