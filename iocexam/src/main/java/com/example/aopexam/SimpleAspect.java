@@ -3,11 +3,14 @@ package com.example.aopexam;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
 public class SimpleAspect {
+
     @Pointcut("execution(* hello())")
     public void pc2(){}
 
