@@ -22,7 +22,7 @@ public class TodoController {
     }
     @PostMapping
     public Todo addTodo(@RequestBody Todo todo){
-        System.out.println("test controller");
+
         return todoService.addTodo(todo.getTodo());
     }
 
@@ -34,7 +34,7 @@ public class TodoController {
 
     @PatchMapping
     public Todo updateTodo(@RequestBody Todo todo){
-
+        System.out.println("test controller"+todo);
         return todoService.updateTodo(todo.getId());
     }
     @DeleteMapping

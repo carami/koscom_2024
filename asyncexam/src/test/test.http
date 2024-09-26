@@ -1,0 +1,21 @@
+### register API 호출 (예: 이름이 "john"인 경우)
+GET http://localhost:8080/register/john
+Accept: application/json
+
+###
+
+### test1 API 호출 (Async 없이 실행)
+GET http://localhost:8080/test1
+Accept: application/json
+
+###
+
+### test2 API 호출 (CompletableFuture를 사용한 Async 실행)
+GET http://localhost:8080/test2
+Accept: application/json
+
+###
+
+### test3 API 호출 (Spring의 @Async를 사용한 Async 실행)
+GET http://localhost:8080/test3
+Accept: application/json

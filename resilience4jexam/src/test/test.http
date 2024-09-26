@@ -1,0 +1,42 @@
+### 전체 Todo 목록 조회
+GET http://localhost:8080/todos
+Accept: application/json
+
+### 전체 Todo 목록 조회
+GET http://localhost:8080/todos-proxy
+Accept: application/json
+
+###
+
+### 특정 Todo 조회 (예: id 1인 경우)
+GET http://localhost:8080/todos/1
+Accept: application/json
+
+###
+
+### Todo 추가
+POST http://localhost:8080/todos
+Content-Type: application/json
+
+{
+  "title": "운동하기",
+  "done": false
+}
+
+###
+
+### Todo 업데이트 (예: id 2번 항목의 상태 변경)
+PUT http://localhost:8080/todos
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "비타민 먹기",
+  "done": true
+}
+
+###
+
+### Todo 삭제 (예: id 3인 경우)
+DELETE http://localhost:8080/todos/3
+Accept: application/json

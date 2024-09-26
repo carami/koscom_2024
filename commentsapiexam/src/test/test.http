@@ -1,0 +1,21 @@
+### 특정 Post의 Comments 조회 (예: postId 1인 경우)
+GET http://localhost:8083/comments/by-post/1
+Accept: application/json
+
+###
+
+### 새 Comment 생성
+POST http://localhost:8083/comments
+Content-Type: application/json
+
+{
+  "postId": 1,
+  "author": "John Doe",
+  "content": "이것은 새로운 댓글입니다."
+}
+
+###
+
+### 특정 Comment 삭제 (예: id 1인 경우)
+DELETE http://localhost:8083/comments/1
+Accept: application/json

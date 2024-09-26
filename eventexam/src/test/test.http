@@ -1,0 +1,9 @@
+### hello API 호출
+GET http://localhost:8080/hello
+Accept: application/json
+
+###
+
+### register API 호출 (예: 이름이 "john"인 경우)
+GET http://localhost:8080/register/john
+Accept: application/json

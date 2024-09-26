@@ -1,0 +1,38 @@
+### Todos 전체 목록 조회
+GET http://localhost:8080/todos-proxy
+Accept: application/json
+
+###
+
+### 특정 Todo 조회 (예: id 1인 경우)
+GET http://localhost:8080/todos-proxy/1
+Accept: application/json
+
+###
+
+### Todo 추가
+POST http://localhost:8080/todos-proxy
+Content-Type: application/json
+
+{
+  "title": "새로운 할 일",
+  "done": false
+}
+
+###
+
+### Todo 삭제 (예: id 2인 경우)
+DELETE http://localhost:8080/todos-proxy/2
+Accept: application/json
+
+###
+
+### Todo 업데이트 (예: id 3인 경우)
+PATCH http://localhost:8080/todos-proxy
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "업데이트된 할 일",
+  "done": true
+}
