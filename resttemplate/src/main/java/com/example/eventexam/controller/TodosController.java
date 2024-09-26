@@ -23,8 +23,10 @@ public class TodosController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Todo>> getTodos(){
-        return ResponseEntity.internalServerError().build();
+    public List<Todo> getTodos(){
+
+//        return ResponseEntity.internalServerError().build();
+        return todos;
     }
 
     @GetMapping("/{id}")

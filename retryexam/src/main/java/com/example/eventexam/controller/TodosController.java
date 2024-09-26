@@ -24,8 +24,8 @@ public class TodosController {
     @GetMapping
     public List<Todo> getTodos(){
         // 나중에 일부러 Exception을 발생하도록 한다.
-//        if(1==1)
-//            throw new RuntimeException();
+        if(1==1)
+            throw new RuntimeException();
         return todos;
     }
 

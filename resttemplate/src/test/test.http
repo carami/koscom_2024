@@ -36,3 +36,9 @@ Content-Type: application/json
 ### Todo 삭제 (예: id 3인 경우)
 DELETE http://localhost:8080/todos/3
 Accept: application/json
+
+
+###
+
+GET http://localhost:8080/todos-proxy
+Accept: application/json

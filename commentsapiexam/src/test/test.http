@@ -11,7 +11,7 @@ Content-Type: application/json
 {
   "postId": 1,
   "author": "John Doe",
-  "content": "이것은 새로운 댓글입니다."
+  "content": "이것은 새로운 댓글입니다.22"
 }
 
 ###
