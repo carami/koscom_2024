@@ -1,20 +1,30 @@
 package com.example.restexam.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import com.example.restexam.domain.Product;
+import org.springframework.web.bind.annotation.*;
+@RequestMapping("/api/v1/")
 @RestController
 public class MyRestController {
-    @GetMapping("/api/hi")
+    @GetMapping("/hi")
     public String hi(){
         return "hi";
     }
 
-    @GetMapping("/api/Users")
+    @GetMapping("/users")
     public String addUser(){
         //각 메소드들을 약속에 맞게 구현해 줘야한다.
          return "addUser";
+    }
+
+    @GetMapping("/users/{id}")
+    public String getUser(@PathVariable String id){
+        return "getUser "+id+" user 정보입니다.";
+
+    }
+
+    @GetMapping(value = "/products/{id}", produces = "application/xml")
+    public Product getProduct(@PathVariable("id") int id){
+        return new Product(id, "pen",9.99);
     }
 
     //URi를 통해서 자원을 나타낸다.
